@@ -1,4 +1,5 @@
 import classes.Bicycle;
+import classes.MountainBike;
 
 public class App {
     public static void main(String[] args) {
@@ -6,6 +7,8 @@ public class App {
         // Bicycle objects
         Bicycle bike1 = new Bicycle();
         Bicycle bike2 = new Bicycle();
+        MountainBike b = new MountainBike();
+
 
         // Invoke methods on
         // those objects
@@ -21,5 +24,8 @@ public class App {
         bike2.speedUp(10);
         bike2.changeGear(3);
         bike2.printStates();
+
+
     }
+
 }
