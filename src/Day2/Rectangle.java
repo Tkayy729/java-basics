@@ -5,22 +5,29 @@ public class Rectangle {
     public int height = 0;
     public Point origin;
 
+    public int id;
+    public static int numberOfBikes = 0;
+
     // four constructors
     public Rectangle() {
         origin = new Point(0, 0);
+        id = ++numberOfBikes;
     }
     public Rectangle(Point p) {
         origin = p;
+        id = ++numberOfBikes;
     }
     public Rectangle(int w, int h) {
         origin = new Point(0, 0);
         width = w;
         height = h;
+        id = ++numberOfBikes;
     }
     public Rectangle(Point p, int w, int h) {
         origin = p;
         width = w;
         height = h;
+        id = ++numberOfBikes;
     }
 
     // a method for moving the rectangle
@@ -32,5 +39,13 @@ public class Rectangle {
     // a method for computing the area of the rectangle
     public int getArea() {
         return width * height;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public static int getNumberOfBikes(){
+       return numberOfBikes;
     }
 }
